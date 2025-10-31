@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input id="item" type="text" placeholder="Add Your Text Here">
+        <button id="addItem" class="btn" type="submit">Submit</button>
+        <ul id="features"></ul>
+    </div>
+
+    <div id="todoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Todo Details</h2>
+            <p id="modalTodoText"></p>
+            <div class="modal-status" id="modalTodoStatus"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
