@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+  <title>Booking.com - Notification Receiver</title>
+  <script src="https://js.pusher.com/8.4.0/pusher.min.js"></script>
+  <script>
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('fd4713b383aca4efd977', {
+      cluster: 'ap2' 
+    });
+
+    var channel = pusher.subscribe('my-custom-notification');
+
+    channel.bind('my-ticket-booking-event', function(data) {
+      alert(data.message); 
+    });
+  </script>
+</head>
+<body>
+  <h1>Booking.com Notification System</h1>
+  <p>Waiting for ticket booking events...</p>
+</body>
